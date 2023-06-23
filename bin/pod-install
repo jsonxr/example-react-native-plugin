@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+if [ "$PROJECT_DIR" = "" ]; then
+  echo "PROJECT_DIR is not set."
+  echo "Run \`direnv allow\` in the root of the project to approve loading .envrc"
+  exit 1
+fi
+
+cd example/ios
+rm -rf example/ios/build
+bundle install
+RCT_NEW_ARCH_ENABLED=1 bundle exec pod install

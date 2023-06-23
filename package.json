@@ -1,0 +1,43 @@
+{
+  "name": "@example/react-native",
+  "version": "0.0.1",
+  "description": "Add numbers with Turbo Native Modules",
+  "react-native": "js/index",
+  "source": "js/index",
+  "files": [
+    "js",
+    "android",
+    "ios",
+    "react-native.podspec",
+    "!android/build",
+    "!ios/build",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "author": "Jason Rowland <jason@example.com>",
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": "https://github.com/jsonxr/example-react-native-plugin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsonxr/example-react-native-plugin/issues"
+  },
+  "homepage": "https://github.com/jsonxr/example-react-native-plugin#readme",
+  "devDependencies": {},
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "codegenConfig": {
+    "name": "RTNExampleSpec",
+    "type": "modules",
+    "jsSrcsDir": "js",
+    "android": {
+      "javaPackageName": "com.example"
+    }
+  }
+}
